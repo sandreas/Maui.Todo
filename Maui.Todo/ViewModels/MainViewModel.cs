@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Maui.Todo.Views;
 
 namespace Maui.Todo.ViewModels;
 
@@ -22,5 +23,11 @@ public partial class MainViewModel: BaseViewModel
             ButtonText = $"Clicked {Count} times";
 
         SemanticScreenReader.Announce(ButtonText);
+    }
+    
+    [RelayCommand]
+    private async Task NavigateToSettingsAsync()
+    {
+        await Shell.Current.GoToAsync(nameof(SettingsPage));
     }
 }
