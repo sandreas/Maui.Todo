@@ -1,6 +1,6 @@
 namespace Maui.Todo.ViewModels;
 
-public class SettingsViewModel
+public class SettingsViewModel:BaseViewModel
 {
     
 }
