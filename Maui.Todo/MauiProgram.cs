@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Maui.Todo.ViewModels;
+using Maui.Todo.Views;
+using Microsoft.Extensions.Logging;
 
 namespace Maui.Todo;
 
@@ -18,7 +20,11 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<MainViewModel>();
+        
+        builder.Services.AddTransient<SettingsPage>();
+        builder.Services.AddTransient<SettingsViewModel>();
         return builder.Build();
     }
 }

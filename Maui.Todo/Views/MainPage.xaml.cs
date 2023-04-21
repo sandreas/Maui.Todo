@@ -1,4 +1,4 @@
-﻿namespace Maui.Todo;
+﻿namespace Maui.Todo.Views;
 
 public partial class MainPage : ContentPage
 {
